@@ -1,10 +1,13 @@
 package ufba.factorymethod;
 
+import ufba.app.TipoDocumento;
+
 public class Main {
 
 	public static void main(String[] args) {
-		CriadorDocumentacao criador = new CriadorHTML();
-		System.out.println(criador.geraDocumentacao());
+		FactoryCriadorDocumentacao factory = new FactoryCriadorDocumentacao();
+		factory.getCriadorDocumentacao(TipoDocumento.HTML);
+		factory.getCriadorDocumentacao(TipoDocumento.MARKDOWN);
 	}
 
 }

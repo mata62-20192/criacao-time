@@ -1,7 +1,6 @@
 package ufba.factorymethod;
 
-import java.util.Date;
-
+import ufba.app.TipoDocumento;
 import ufba.elementos.Cabecalho;
 import ufba.elementos.Corpo;
 import ufba.elementos.Rodape;
@@ -12,8 +11,6 @@ import ufba.elementos.markdown.CabecalhoMarkdown;
 import ufba.elementos.markdown.CorpoMarkdown;
 import ufba.elementos.markdown.RodapeMarkdown;
 
-public abstract class CriadorDocumentacao {
-		
-	public abstract String geraDocumentacao();
-
+public abstract class CriadorDocumentacao {		
+	public TipoDocumento tipoDocumento;
 }
